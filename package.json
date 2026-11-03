@@ -1,0 +1,29 @@
+{
+  "name": "lockin-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LockIn study commitment and invitation REST API",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && npm run start:prod",
+    "build:watch": "tsc --watch",
+    "start:prod": "node dist/main.js",
+    "test": "npm run test:e2e",
+    "test:e2e": "npm run build && node --test test/api.e2e.cjs"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/platform-express": "^11.1.0",
+    "@nestjs/swagger": "^11.2.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "typescript": "~5.9.3"
+  }
+}
